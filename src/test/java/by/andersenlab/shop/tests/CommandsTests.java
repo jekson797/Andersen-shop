@@ -1,8 +1,8 @@
 package by.andersenlab.shop.tests;
 
 import by.andersenlab.shop.conditions.BeforeClassAnnotationsUnitTest;
-import by.andersenlab.shop.shop.commands.*;
-import by.andersenlab.shop.shop.product.Product;
+import by.andersenlab.shop.commands.*;
+import by.andersenlab.shop.product.Product;
 import org.junit.Assert;
 import org.junit.Test;
 

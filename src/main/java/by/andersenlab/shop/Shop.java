@@ -1,8 +1,8 @@
-package by.andersenlab.shop.shop;
+package by.andersenlab.shop;
 
-import by.andersenlab.shop.shop.commands.ProductCommand;
-import by.andersenlab.shop.shop.commands.ReturnProductsCommand;
-import by.andersenlab.shop.shop.product.Product;
+import by.andersenlab.shop.commands.ProductCommand;
+import by.andersenlab.shop.commands.ReturnProductsCommand;
+import by.andersenlab.shop.product.Product;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package by.andersenlab.shop.shop.enums;
+package by.andersenlab.shop.enums;
 
 public enum ProductGroup {
 

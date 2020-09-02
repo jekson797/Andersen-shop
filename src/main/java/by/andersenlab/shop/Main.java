@@ -1,13 +1,13 @@
-package by.andersenlab.shop.shop;
+package by.andersenlab.shop;
 
-import by.andersenlab.shop.shop.builder.CommonProductBuilder;
-import by.andersenlab.shop.shop.commands.AddProductCommand;
-import by.andersenlab.shop.shop.commands.GetAllProductsCommand;
-import by.andersenlab.shop.shop.commands.ProductCommand;
-import by.andersenlab.shop.shop.commands.ReturnProductsCommand;
-import by.andersenlab.shop.shop.enums.Currency;
-import by.andersenlab.shop.shop.enums.ProductGroup;
-import by.andersenlab.shop.shop.product.Product;
+import by.andersenlab.shop.builder.CommonProductBuilder;
+import by.andersenlab.shop.commands.AddProductCommand;
+import by.andersenlab.shop.commands.GetAllProductsCommand;
+import by.andersenlab.shop.commands.ProductCommand;
+import by.andersenlab.shop.commands.ReturnProductsCommand;
+import by.andersenlab.shop.enums.Currency;
+import by.andersenlab.shop.enums.ProductGroup;
+import by.andersenlab.shop.product.Product;
 
 import java.math.BigDecimal;
 

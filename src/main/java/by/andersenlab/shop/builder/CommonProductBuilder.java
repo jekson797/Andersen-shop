@@ -1,8 +1,8 @@
-package by.andersenlab.shop.shop.builder;
+package by.andersenlab.shop.builder;
 
-import by.andersenlab.shop.shop.enums.Currency;
-import by.andersenlab.shop.shop.product.Product;
-import by.andersenlab.shop.shop.enums.ProductGroup;
+import by.andersenlab.shop.enums.Currency;
+import by.andersenlab.shop.product.Product;
+import by.andersenlab.shop.enums.ProductGroup;
 
 import java.math.BigDecimal;
 
