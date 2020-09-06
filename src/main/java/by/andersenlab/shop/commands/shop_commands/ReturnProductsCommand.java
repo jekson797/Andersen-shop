@@ -1,6 +1,6 @@
 package by.andersenlab.shop.commands;
 
-import by.andersenlab.shop.product.Product;
+import by.andersenlab.shop.products.Product;
 
 import java.util.Set;
 

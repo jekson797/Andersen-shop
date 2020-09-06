@@ -1,12 +1,8 @@
 package by.andersenlab.shop.conditions;
 
-import by.andersenlab.shop.builder.CommonProductBuilder;
-import by.andersenlab.shop.enums.Currency;
-import by.andersenlab.shop.enums.ProductGroup;
-import by.andersenlab.shop.product.Product;
+import by.andersenlab.shop.products.GameConsoleProduct;
+import by.andersenlab.shop.products.Product;
 import org.junit.BeforeClass;
-
-import java.math.BigDecimal;
 
 public class BeforeClassAnnotationsUnitTest {
 
@@ -14,13 +10,7 @@ public class BeforeClassAnnotationsUnitTest {
 
     @BeforeClass
     public static void setup() {
-        product = new CommonProductBuilder().
-                reset().
-                setName("Playstation 5").
-                setGroup(ProductGroup.GAME_CONSOLE).
-                setPrice(new BigDecimal("500.0")).
-                setCurrency(Currency.USD).
-                getProduct();
+        product = new GameConsoleProduct.GameConsoleBuilder().build();
     }
 
     protected Product getProduct() {
