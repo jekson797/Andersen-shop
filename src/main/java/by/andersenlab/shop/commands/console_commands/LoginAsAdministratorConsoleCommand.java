@@ -2,9 +2,9 @@ package by.andersenlab.shop.commands.console_commands;
 
 import by.andersenlab.shop.pages.MainPage;
 
-public class LoginAsAdministratorCommand implements ConsoleCommand {
+public class LoginAsAdministratorConsoleCommand implements ConsoleCommand {
 
-    private static final int id = 1;
+    private static final int ID = 1;
 
     @Override
     public void execute() {
@@ -15,11 +15,11 @@ public class LoginAsAdministratorCommand implements ConsoleCommand {
 
     @Override
     public void showCommandInfo() {
-        System.out.println(id + " - Войти как администратор");
+        System.out.println(ID + " - Войти как администратор");
     }
 
     @Override
     public int getCommandId() {
-        return id;
+        return ID;
     }
 }

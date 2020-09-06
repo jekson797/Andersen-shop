@@ -1,4 +1,4 @@
-package by.andersenlab.shop.commands;
+package by.andersenlab.shop.commands.shop_commands;
 
 import by.andersenlab.shop.products.Product;
 

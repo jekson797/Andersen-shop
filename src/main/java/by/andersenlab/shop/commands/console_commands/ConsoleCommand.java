@@ -1,9 +1,8 @@
 package by.andersenlab.shop.commands.console_commands;
 
-public class LoginCommand {
+public interface ConsoleCommand {
 
-//    логин - цифра 
-//    желаемое действие - цифра
-//    выолнение действия
-//
+    void execute();
+    void showCommandInfo();
+    int getCommandId();
 }

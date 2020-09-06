@@ -7,5 +7,5 @@ public enum ProductGroup {
     NOTEBOOK,
     MONITOR,
     GAME_CONSOLE,
-    OTHER
+    COMPUTER_ACCESSORY
 }

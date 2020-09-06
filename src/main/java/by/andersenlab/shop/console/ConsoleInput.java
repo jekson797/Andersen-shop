@@ -1,4 +1,4 @@
-package by.andersenlab.shop;
+package by.andersenlab.shop.console;
 
 import java.util.List;
 import java.util.Scanner;
@@ -8,11 +8,11 @@ public class ConsoleInput {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static double getNumberFromConsoleInput(String inputPrefix) {
-        int userNumber = 0;
+        double userNumber = 0;
         while (true) {
             try {
                 System.out.print(inputPrefix);
-                userNumber = Integer.parseInt(scanner.nextLine());
+                userNumber = Double.parseDouble(scanner.nextLine());
             } catch (NumberFormatException e) {
                 System.out.println("Введено неверное значение! Попробуйте ещё раз.");
                 continue;
@@ -57,7 +57,7 @@ public class ConsoleInput {
             builder.append(value).append(" | ");
         }
         builder.delete(builder.length() - 3, builder.length());
-        builder.append("):");
+        builder.append("): ");
         return builder.toString();
     }
 }
