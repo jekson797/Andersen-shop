@@ -7,12 +7,27 @@ public class ConsoleInput {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static double getNumberFromConsoleInput(String inputPrefix) {
+    public static double getDoubleFromConsoleInput(String inputPrefix) {
         double userNumber = 0;
         while (true) {
             try {
                 System.out.print(inputPrefix);
                 userNumber = Double.parseDouble(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Введено неверное значение! Попробуйте ещё раз.");
+                continue;
+            }
+            break;
+        }
+        return userNumber;
+    }
+
+    public static int getIntegerFromConsoleInput(String inputPrefix) {
+        int userNumber = 0;
+        while (true) {
+            try {
+                System.out.print(inputPrefix);
+                userNumber = Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
                 System.out.println("Введено неверное значение! Попробуйте ещё раз.");
                 continue;

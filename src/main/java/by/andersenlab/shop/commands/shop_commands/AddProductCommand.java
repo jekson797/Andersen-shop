@@ -9,5 +9,6 @@ public class AddProductCommand implements ProductCommand {
     @Override
     public void execute(Product product, Set<Product> products) {
         products.add(product);
+        System.out.println("Добавление продукта завершено");
     }
 }

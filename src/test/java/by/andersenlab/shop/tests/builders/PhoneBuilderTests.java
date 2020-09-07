@@ -32,7 +32,7 @@ public class PhoneBuilderTests {
     @Test
     @Parameters({"6.53"})
     public void buildScreenSizeTest(double diagonal) {
-        PhoneProduct product = new PhoneProduct.PhoneBuilder().buildScreenSize(diagonal).build();
+        PhoneProduct product = new PhoneProduct.PhoneBuilder().buildDiagonal(diagonal).build();
         Assert.assertEquals(diagonal, product.getDiagonal(), DELTA);
     }
 

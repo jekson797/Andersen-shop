@@ -14,9 +14,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class AddComputerAccessoryPage extends ProductAddPage {
+public class ComputerAccessoryAddPage extends ProductAddPage {
 
-    public AddComputerAccessoryPage() {
+    public ComputerAccessoryAddPage() {
         super(ProductGroup.COMPUTER_ACCESSORY);
     }
 
@@ -29,10 +29,10 @@ public class AddComputerAccessoryPage extends ProductAddPage {
 
     private Product buildProduct() {
         return new ComputerAccessoryProduct.AccessoryBuilder().
-                buildName(ConsoleInput.getStringFromConsoleInput("Введите имя продукта: ")).
+                buildName(ConsoleInput.getStringFromConsoleInput("Введите название аксессуара: ")).
                 buildAccessoryType(getUserAccessoryType()).
                 buildPrice(BigDecimal.valueOf(
-                        ConsoleInput.getNumberFromConsoleInput("Введите цену продукта: "))).
+                        ConsoleInput.getDoubleFromConsoleInput("Введите цену аксессуара: "))).
                 buildCurrency(getUserCurrency()).
                 build();
     }

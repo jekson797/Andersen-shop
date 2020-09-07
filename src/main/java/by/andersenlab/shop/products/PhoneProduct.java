@@ -84,7 +84,7 @@ public class PhoneProduct extends Product {
         return "Id: " + getProductId() +
                 " | Group: " + ProductGroup.PHONE +
                 " | Name: " + getName() +
-                " | Os: " + os +
+                " | OS: " + os +
                 " | Diagonal: " + diagonal +
                 " | Memory: " + memorySize + " GB" +
                 " | Ram: " + ram + " GB" +
@@ -113,7 +113,7 @@ public class PhoneProduct extends Product {
             return this;
         }
 
-        public PhoneBuilder buildScreenSize(double diagonal) {
+        public PhoneBuilder buildDiagonal(double diagonal) {
             this.diagonal = diagonal;
             return this;
         }

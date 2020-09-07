@@ -2,8 +2,7 @@ package by.andersenlab.shop.commands.console_commands;
 
 import by.andersenlab.shop.console.ConsoleInput;
 import by.andersenlab.shop.enums.ProductGroup;
-import by.andersenlab.shop.pages.product_add_pages.AddComputerAccessoryPage;
-import by.andersenlab.shop.pages.product_add_pages.ProductAddPage;
+import by.andersenlab.shop.pages.product_add_pages.*;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -15,7 +14,12 @@ public class AddProductConsoleCommand implements ConsoleCommand {
 
     private static final int ID = 1;
     private static Set<ProductAddPage> availableProductAddPages = new HashSet<>(Arrays.asList(
-            new AddComputerAccessoryPage()
+            new ComputerAccessoryAddPage(),
+            new GameConsoleAddPage(),
+            new MonitorAddPage(),
+            new NotebookAddPage(),
+            new PcAddPage(),
+            new PhoneAddPage()
     ));
 
     @Override

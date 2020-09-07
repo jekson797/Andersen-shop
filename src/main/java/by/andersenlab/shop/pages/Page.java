@@ -14,7 +14,7 @@ public abstract class Page {
 
     public Page(Set<ConsoleCommand> availableCommands) {
         this.availableCommands = availableCommands;
-        System.out.println("Доступные команды: ");
+        System.out.println("-> Доступные команды: ");
         for (ConsoleCommand command : availableCommands) {
             command.showCommandInfo();
         }
@@ -23,7 +23,7 @@ public abstract class Page {
     public void commandChoice() {
         choiceLoop:
         while(true) {
-            double userChoice = ConsoleInput.getNumberFromConsoleInput("Введите номер команды: ");
+            double userChoice = ConsoleInput.getDoubleFromConsoleInput("Введите номер команды: ");
             for (ConsoleCommand command : availableCommands) {
                 if (command.getCommandId() == userChoice) {
                     command.execute();

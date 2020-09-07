@@ -9,5 +9,6 @@ public class RemoveProductCommand implements ProductCommand {
     @Override
     public void execute(Product product, Set<Product> products) {
         products.remove(product);
+        System.out.println("Удаление продукта завершено");
     }
 }
