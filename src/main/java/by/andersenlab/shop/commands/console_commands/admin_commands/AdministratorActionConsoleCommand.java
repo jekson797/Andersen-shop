@@ -1,6 +1,7 @@
-package by.andersenlab.shop.commands.console_commands;
+package by.andersenlab.shop.commands.console_commands.admin_commands;
 
-import by.andersenlab.shop.pages.MainPage;
+import by.andersenlab.shop.commands.console_commands.ConsoleCommand;
+import by.andersenlab.shop.pages.users_pages.AdministratorMainPage;
 
 public class AdministratorActionConsoleCommand implements ConsoleCommand {
 
@@ -8,8 +9,9 @@ public class AdministratorActionConsoleCommand implements ConsoleCommand {
 
     @Override
     public void execute() {
-        MainPage mainPage = new MainPage();
-        mainPage.commandChoice();
+        AdministratorMainPage administratorMainPage = new AdministratorMainPage();
+        administratorMainPage.showAvailableCommands();
+        administratorMainPage.commandChoice();
     }
 
     @Override

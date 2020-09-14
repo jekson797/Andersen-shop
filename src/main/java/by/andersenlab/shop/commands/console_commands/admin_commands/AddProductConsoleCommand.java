@@ -1,5 +1,7 @@
-package by.andersenlab.shop.commands.console_commands;
+package by.andersenlab.shop.commands.console_commands.admin_commands;
 
+import by.andersenlab.shop.commands.console_commands.ConsoleCommand;
+import by.andersenlab.shop.commands.console_commands.ReturnToMainPageConsoleCommand;
 import by.andersenlab.shop.console.ConsoleInput;
 import by.andersenlab.shop.enums.ProductGroup;
 import by.andersenlab.shop.pages.product_add_pages.*;
