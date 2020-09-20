@@ -17,7 +17,8 @@ public class PcProduct extends Product {
     private MemoryDriveType driveType;
 
     public PcProduct(PcBuilder builder) {
-        super(builder.name, ProductGroup.PC, builder.price, builder.currency);
+        super(builder.brand, builder.model,
+                ProductGroup.PC, builder.price, builder.currency);
         this.gpuName = builder.gpuName;
         this.cpuName = builder.cpuName;
         this.coresNumber = builder.coresNumber;
@@ -96,7 +97,8 @@ public class PcProduct extends Product {
     public String toString() {
         return "Id: " + getProductId() +
                 " | Group: " + ProductGroup.PC +
-                " | Name: " + getName() +
+                " | Brand: " + getBrand() +
+                " | Model: " + getModel() +
                 " | GPU: " + gpuName +
                 " | Cpu: " + cpuName +
                 " | Cores number: " + coresNumber +
@@ -108,7 +110,8 @@ public class PcProduct extends Product {
 
     public static class PcBuilder {
 
-        private String name;
+        private String brand;
+        private String model;
         private String gpuName;
         private String cpuName;
         private int coresNumber;
@@ -118,8 +121,13 @@ public class PcProduct extends Product {
         private BigDecimal price;
         private Currency currency;
 
-        public PcBuilder buildName(String name) {
-            this.name = name;
+        public PcBuilder buildBrand(String brand) {
+            this.brand = brand;
+            return this;
+        }
+
+        public PcBuilder buildModel(String model) {
+            this.model = model;
             return this;
         }
 

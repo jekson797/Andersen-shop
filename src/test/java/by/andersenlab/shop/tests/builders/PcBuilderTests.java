@@ -17,8 +17,8 @@ public class PcBuilderTests {
     @Test
     @Parameters({"Irwin Computers Zen G1-07"})
     public void buildNameTest(String name) {
-        PcProduct product = new PcProduct.PcBuilder().buildName(name).build();
-        Assert.assertEquals(name, product.getName());
+        PcProduct product = new PcProduct.PcBuilder().buildBrand(name).build();
+        Assert.assertEquals(name, product.getBrand());
     }
 
     @Test

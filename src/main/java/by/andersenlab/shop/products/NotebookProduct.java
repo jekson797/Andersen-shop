@@ -19,7 +19,8 @@ public class NotebookProduct extends Product {
     private DisplayType displayType;
 
     public NotebookProduct(NotebookBuilder builder) {
-        super(builder.name, ProductGroup.NOTEBOOK, builder.price, builder.currency);
+        super(builder.brand, builder.model,
+                ProductGroup.NOTEBOOK, builder.price, builder.currency);
         this.gpuName = builder.gpuName;
         this.cpuName = builder.cpuName;
         this.coresNumber = builder.coresNumber;
@@ -108,7 +109,8 @@ public class NotebookProduct extends Product {
     public String toString() {
         return "Id: " + getProductId() +
                 " | Group: " + ProductGroup.NOTEBOOK +
-                " | Name: " + getName() +
+                " | Brand: " + getBrand() +
+                " | Model: " + getModel() +
                 " | Display type: " + displayType +
                 " | GPU: " + gpuName +
                 " | Cpu: " + cpuName +
@@ -121,7 +123,8 @@ public class NotebookProduct extends Product {
 
     public static class NotebookBuilder {
 
-        private String name;
+        private String brand;
+        private String model;
         private String gpuName;
         private String cpuName;
         private int coresNumber;
@@ -132,8 +135,13 @@ public class NotebookProduct extends Product {
         private BigDecimal price;
         private Currency currency;
 
-        public NotebookBuilder buildName(String name) {
-            this.name = name;
+        public NotebookBuilder buildBrand(String brand) {
+            this.brand = brand;
+            return this;
+        }
+
+        public NotebookBuilder buildModel(String model) {
+            this.model = model;
             return this;
         }
 

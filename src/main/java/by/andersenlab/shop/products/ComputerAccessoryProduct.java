@@ -12,7 +12,8 @@ public class ComputerAccessoryProduct extends Product {
     private AccessoryType accessoryType;
 
     public ComputerAccessoryProduct(AccessoryBuilder builder) {
-        super(builder.name, ProductGroup.COMPUTER_ACCESSORY, builder.price, builder.currency);
+        super(builder.brand, builder.model,
+                ProductGroup.COMPUTER_ACCESSORY, builder.price, builder.currency);
         this.accessoryType = builder.accessoryType;
     }
 
@@ -41,20 +42,27 @@ public class ComputerAccessoryProduct extends Product {
     public String toString() {
         return "Id: " + getProductId() +
                 " | Group: " + ProductGroup.COMPUTER_ACCESSORY +
-                " | Name: " + getName() +
+                " | Brand: " + getBrand() +
+                " | Model: " + getModel() +
                 " | Accessory type: " + accessoryType +
                 " | Price: " + getPrice() + " " + getCurrency();
     }
 
     public static class AccessoryBuilder {
 
-        private String name;
+        private String brand;
+        private String model;
         private AccessoryType accessoryType;
         private BigDecimal price;
         private Currency currency;
 
-        public AccessoryBuilder buildName(String name) {
-            this.name = name;
+        public AccessoryBuilder buildBrand(String brand) {
+            this.brand = brand;
+            return this;
+        }
+
+        public AccessoryBuilder buildModel(String model) {
+            this.model = model;
             return this;
         }
 

@@ -19,15 +19,15 @@ public class MonitorBuilderTests {
     @Test
     @Parameters({"HP 27f"})
     public void buildNameTest(String name) {
-        MonitorProduct product = new MonitorProduct.MonitorBuilder().buildName(name).build();
-        Assert.assertEquals(name, product.getName());
+        MonitorProduct product = new MonitorProduct.MonitorBuilder().buildBrand(name).build();
+        Assert.assertEquals(name, product.getBrand());
     }
 
     @Test
     @Parameters({"16:9"})
     public void buildAspectRationTest(String aspectRation) {
-        MonitorProduct product = new MonitorProduct.MonitorBuilder().buildAspectRation(aspectRation).build();
-        Assert.assertEquals(aspectRation, product.getAspectRation());
+        MonitorProduct product = new MonitorProduct.MonitorBuilder().buildAspectRatio(aspectRation).build();
+        Assert.assertEquals(aspectRation, product.getAspectRatio());
     }
 
     @Test

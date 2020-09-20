@@ -17,8 +17,8 @@ public class GameConsoleBuilderTests {
     @Test
     @Parameters({"Playstation 4"})
     public void buildNameTest(String name) {
-        GameConsoleProduct product = new GameConsoleProduct.GameConsoleBuilder().buildName(name).build();
-        Assert.assertEquals(name, product.getName());
+        GameConsoleProduct product = new GameConsoleProduct.GameConsoleBuilder().buildBrand(name).build();
+        Assert.assertEquals(name, product.getBrand());
     }
 
     @Test

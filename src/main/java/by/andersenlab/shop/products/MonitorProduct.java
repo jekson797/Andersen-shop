@@ -9,25 +9,26 @@ import java.util.Objects;
 
 public class MonitorProduct extends Product {
 
-    private String aspectRation;
+    private String aspectRatio;
     private String resolution;
     private double diagonal;
     private DisplayType displayType;
 
     public MonitorProduct(MonitorBuilder builder) {
-        super(builder.name, ProductGroup.MONITOR, builder.price, builder.currency);
-        this.aspectRation = builder.aspectRation;
+        super(builder.brand, builder.model,
+                ProductGroup.MONITOR, builder.price, builder.currency);
+        this.aspectRatio = builder.aspectRatio;
         this.resolution = builder.resolution;
         this.diagonal = builder.diagonal;
         this.displayType = builder.displayType;
     }
 
-    public String getAspectRation() {
-        return aspectRation;
+    public String getAspectRatio() {
+        return aspectRatio;
     }
 
-    public void setAspectRation(String aspectRation) {
-        this.aspectRation = aspectRation;
+    public void setAspectRatio(String aspectRatio) {
+        this.aspectRatio = aspectRatio;
     }
 
     public String getResolution() {
@@ -60,22 +61,23 @@ public class MonitorProduct extends Product {
         if (o == null || getClass() != o.getClass()) return false;
         MonitorProduct that = (MonitorProduct) o;
         return Double.compare(that.diagonal, diagonal) == 0 &&
-                Objects.equals(aspectRation, that.aspectRation) &&
+                Objects.equals(aspectRatio, that.aspectRatio) &&
                 Objects.equals(resolution, that.resolution) &&
                 displayType == that.displayType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(aspectRation, resolution, diagonal, displayType);
+        return Objects.hash(aspectRatio, resolution, diagonal, displayType);
     }
 
     @Override
     public String toString() {
         return "Id: " + getProductId() +
                 " | Group: " + ProductGroup.MONITOR +
-                " | Name: " + getName() +
-                " | Aspect ration: " + aspectRation +
+                " | Brand: " + getBrand() +
+                " | Model" + getModel() +
+                " | Aspect ration: " + aspectRatio +
                 " | Resolution: " + resolution +
                 " | Diagonal: " + diagonal +
                 " | Display Type: " + displayType +
@@ -84,21 +86,27 @@ public class MonitorProduct extends Product {
 
     public static class MonitorBuilder {
 
-        private String name;
-        private String aspectRation;
+        private String brand;
+        private String model;
+        private String aspectRatio;
         private String resolution;
         private double diagonal;
         private DisplayType displayType;
         private BigDecimal price;
         private Currency currency;
 
-        public MonitorBuilder buildName(String name) {
-            this.name = name;
+        public MonitorBuilder buildBrand(String brand) {
+            this.brand = brand;
             return this;
         }
 
-        public MonitorBuilder buildAspectRation(String aspectRation) {
-            this.aspectRation = aspectRation;
+        public MonitorBuilder buildModel(String model) {
+            this.model = model;
+            return this;
+        }
+
+        public MonitorBuilder buildAspectRatio(String aspectRatio) {
+            this.aspectRatio = aspectRatio;
             return this;
         }
 

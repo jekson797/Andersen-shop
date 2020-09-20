@@ -17,7 +17,8 @@ public class GameConsoleProduct extends Product {
     private Set<String> gamesIncluded;
 
     public GameConsoleProduct(GameConsoleBuilder builder) {
-        super(builder.name, ProductGroup.GAME_CONSOLE, builder.price, builder.currency);
+        super(builder.brand, builder.model,
+                ProductGroup.GAME_CONSOLE, builder.price, builder.currency);
         this.driveType = builder.driveType;
         this.memorySize = builder.memorySize;
         this.controllersAmount = builder.controllersAmount;
@@ -76,7 +77,8 @@ public class GameConsoleProduct extends Product {
     public String toString() {
         return "Id: " + getProductId() +
                 " | Group: " + ProductGroup.GAME_CONSOLE +
-                " | Name: " + getName() +
+                " | Brand: " + getBrand() +
+                " | Model: " + getModel() +
                 " | Drive type: " + driveType +
                 " | Memory: " + memorySize + " GB" +
                 " | Controllers amount: " + controllersAmount +
@@ -87,7 +89,8 @@ public class GameConsoleProduct extends Product {
 
     public static class GameConsoleBuilder {
 
-        private String name;
+        private String brand;
+        private String model;
         private MemoryDriveType driveType;
         private int memorySize;
         private int controllersAmount;
@@ -95,8 +98,13 @@ public class GameConsoleProduct extends Product {
         private BigDecimal price;
         private Currency currency;
 
-        public GameConsoleBuilder buildName(String name) {
-            this.name = name;
+        public GameConsoleBuilder buildBrand(String brand) {
+            this.brand = brand;
+            return this;
+        }
+
+        public GameConsoleBuilder buildModel(String model) {
+            this.model = model;
             return this;
         }
 

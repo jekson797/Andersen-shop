@@ -2,6 +2,7 @@ package by.andersenlab.shop.tests.builders;
 
 import by.andersenlab.shop.enums.Currency;
 import by.andersenlab.shop.products.PhoneProduct;
+import by.andersenlab.shop.products.Product;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Assert;
@@ -18,8 +19,8 @@ public class PhoneBuilderTests {
     @Test
     @Parameters({"HONOR 30"})
     public void buildNameTest(String name) {
-        PhoneProduct product = new PhoneProduct.PhoneBuilder().buildName(name).build();
-        Assert.assertEquals(name, product.getName());
+        PhoneProduct product = new PhoneProduct.PhoneBuilder().buildBrand(name).build();
+        Assert.assertEquals(name, product.getBrand());
     }
 
     @Test

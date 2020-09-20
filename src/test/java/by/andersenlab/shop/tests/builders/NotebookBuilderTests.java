@@ -18,8 +18,8 @@ public class NotebookBuilderTests {
     @Test
     @Parameters({"ASUS TUF Gaming FX505DT-BQ180"})
     public void buildNameTest(String name) {
-        NotebookProduct product = new NotebookProduct.NotebookBuilder().buildName(name).build();
-        Assert.assertEquals(name, product.getName());
+        NotebookProduct product = new NotebookProduct.NotebookBuilder().buildBrand(name).build();
+        Assert.assertEquals(name, product.getBrand());
     }
 
     @Test

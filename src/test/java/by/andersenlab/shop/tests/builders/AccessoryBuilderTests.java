@@ -17,8 +17,8 @@ public class AccessoryBuilderTests {
     @Test
     @Parameters({"Canyon CNS-CMSW18PW"})
     public void buildNameTest(String name) {
-        ComputerAccessoryProduct product = new ComputerAccessoryProduct.AccessoryBuilder().buildName(name).build();
-        Assert.assertEquals(name, product.getName());
+        ComputerAccessoryProduct product = new ComputerAccessoryProduct.AccessoryBuilder().buildBrand(name).build();
+        Assert.assertEquals(name, product.getBrand());
     }
 
     @Test

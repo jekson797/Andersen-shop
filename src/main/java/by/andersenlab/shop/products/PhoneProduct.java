@@ -15,7 +15,8 @@ public class PhoneProduct extends Product {
     private double diagonal;
 
     public PhoneProduct(PhoneBuilder builder) {
-        super(builder.name, ProductGroup.PHONE, builder.price, builder.currency);
+        super(builder.brand, builder.model,
+                ProductGroup.PHONE, builder.price, builder.currency);
         this.os = builder.os;
         this.diagonal = builder.diagonal;
         this.ram = builder.ram;
@@ -83,7 +84,8 @@ public class PhoneProduct extends Product {
     public String toString() {
         return "Id: " + getProductId() +
                 " | Group: " + ProductGroup.PHONE +
-                " | Name: " + getName() +
+                " | Brand: " + getBrand() +
+                " | Model: " + getModel() +
                 " | OS: " + os +
                 " | Diagonal: " + diagonal +
                 " | Memory: " + memorySize + " GB" +
@@ -94,7 +96,8 @@ public class PhoneProduct extends Product {
 
     public static class PhoneBuilder {
 
-        private String name;
+        private String brand;
+        private String model;
         private String os;
         private int memorySize;
         private int ram;
@@ -103,8 +106,13 @@ public class PhoneProduct extends Product {
         private BigDecimal price;
         private Currency currency;
 
-        public PhoneBuilder buildName(String name) {
-            this.name = name;
+        public PhoneBuilder buildBrand(String brand) {
+            this.brand = brand;
+            return this;
+        }
+
+        public PhoneBuilder buildModel(String model) {
+            this.model = model;
             return this;
         }
 

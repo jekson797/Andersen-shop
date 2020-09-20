@@ -5,37 +5,56 @@ import by.andersenlab.shop.enums.ProductGroup;
 
 import java.math.BigDecimal;
 
-public abstract class Product {
+public class Product {
 
-    private static long id = 0L;
-
-    private long productId = id;
-    private String name;
+    private long productId;
+    private String brand;
+    private String model;
     private ProductGroup group;
     private BigDecimal price;
     private Currency currency;
 
-    public Product(String name, ProductGroup group, BigDecimal price, Currency currency) {
-        id++;
-        this.name = name;
+    public Product(String brand, String model,
+                   ProductGroup group, BigDecimal price, Currency currency) {
+        this.brand = brand;
+        this.model = model;
         this.group = group;
         this.price = price;
         this.currency = currency;
+    }
+
+    public Product() {
+    }
+
+    public void setProductId(long productId) {
+        this.productId = productId;
     }
 
     public long getProductId() {
         return productId;
     }
 
-    public String getName() {
-        return name;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public ProductGroup getGroup() {
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getGroup() {
+        return group.toString();
+    }
+
+    public ProductGroup getGroupEnum() {
         return group;
     }
 
